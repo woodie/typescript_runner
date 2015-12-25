@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
 TSFILE=${@##*/}
-JSFILE=${TSFILE/%ts/\js}
+JSFILE=${TSFILE/%ts/js}
 tsc --outDir $TMPDIR ${@}
 node $TMPDIR$JSFILE
