@@ -12,8 +12,14 @@ The command simply transpiles the TS file to $TMPDIR, then runs the JS output wi
 
 TSFILE=${@##*/}
 JSFILE=${TSFILE/%ts/js}
-tsc --outDir $TMPDIR ${@}
-node $TMPDIR$JSFILE
+MD5DIR=`md5 -q ${@}`/
+if [ ! -d $TMPDIR$MD5DIR ]; then
+  mkdir $TMPDIR$MD5DIR
+fi
+if [ ! -f $TMPDIR$MD5DIR$JSFILE ]; then
+  tsc --outDir $TMPDIR$MD5DIR ${@}
+fi
+node $TMPDIR$MD5DIR$JSFILE
 ```
 
 If you chegkout this repo, you can install install the script like this.
