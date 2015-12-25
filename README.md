@@ -33,4 +33,4 @@ The typescript.vim file is from here:
 
 http://blogs.msdn.com/b/interoperability/archive/2012/10/01/sublime-text-vi-emacs-typescript-enabled.aspx
 
-I had the install and run dos2unix to get gid of the CRTL-M characters.
+I had the install and run dos2unix to get gid of the CTRL-M characters.
