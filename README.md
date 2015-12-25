@@ -1,10 +1,11 @@
-Typescript from the command-line `
+# Typescript from the command-line
 
 I'd like to experiment with TypeScript, and have similarly named files right next to ECMAScript 5 files. I found this was a bit too complicated, the TypeScript compiler wanted to clobber my similarly names JS files. 
 
 I decided the create a new shebang for this.
 ```bash
 #!/usr/bin/env typescript
+```
 
 The command simply transpiles the TS file to $TMPDIR, then runs the JS output with node. Node ignores to shebang.
 
