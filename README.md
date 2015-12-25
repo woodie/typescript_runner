@@ -5,7 +5,7 @@ I'd like to experiment with TypeScript, and have similarly named files right nex
 #!/usr/bin/env typescript
 ```
 
-The command simply transpiles the TS file to $TMPDIR, then runs the JS output with node. Node ignores to shebang.
+The command transpiles the TS file to a unique folder in $TMPDIR, then runs the JS output with node. Node ignores to shebang.
 
 ```bash
 #!/usr/bin/env bash
